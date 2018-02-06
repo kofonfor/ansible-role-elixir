@@ -1,0 +1,8 @@
+- name: install Erlang Solutions repo
+  apt: deb=https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+
+- name: install esl-erlang
+  apt: name="esl-erlang={{ erlang_version }}" state=present
+
+- name: install Elixir
+  apt: name="elixir={{ elixir_version }}" state=present
